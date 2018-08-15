@@ -11,13 +11,13 @@ Keyboard shortcuts simply trigger media key presses, rather than being wired up 
 
 ## Shortcuts
 
-| Keys       |       Command |
-| ---------- | ------------: |
-| ctrl-alt-x |  Play / Pause |
-| ctrl-alt-c |     Next song |
-| ctrl-alt-v | Previous song |
+| Keys       | Command       |
+| :--------- | :------------ |
+| Ctrl-Alt-X | Play / Pause  |
+| Ctrl-Alt-C | Next song     |
+| Ctrl-Alt-V | Previous song |
 
 ## Support
 
 - Windows
-- OSX (untested)
+- OSX (but untested)
