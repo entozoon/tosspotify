@@ -17,7 +17,9 @@ Keyboard shortcuts simply trigger media key presses, rather than being wired up 
 | Ctrl-Alt-C | Next song     |
 | Ctrl-Alt-V | Previous song |
 
-## Support
+## Release (dev notes)
 
-- Windows
-- OSX (but untested)
+Current release built for `node9-win`. It must be named `node.exe` as it uses native modules that rely on that filename [(sigh!)](https://github.com/zeit/pkg/issues/161#issuecomment-394309701).
+
+    npm i -g pkg@4.3.1
+    npm run build
