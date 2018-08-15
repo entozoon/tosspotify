@@ -1,6 +1,6 @@
 {
   "name": "tosspotify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Control Spotify with global hotkeys (a la [Toastify](https://github.com/aleab/toastify) - which is dead at time of writing).",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/entozoon/tosspotify#readme",
   "dependencies": {
-    "iohook": "^0.2.0"
+    "hotkeys-js": "^3.3.5",
+    "iohook": "^0.2.0",
+    "robotjs": "^0.5.1"
   }
 }

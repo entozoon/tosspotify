@@ -1,52 +1,38 @@
-// //
-// // Use stuff from the spotify playlist thingy I made.
-// // No personal details of course.
-// //
+const robot = require("robotjs"),
+  ioHook = require("iohook");
+ioHook.start();
 
-// Use this thing
-// https://github.com/jaywcjlove/hotkeys
-//
-hotkeys("ctrl+a,ctrl+b,r,f", function(event, handler) {
-  switch (handler.key) {
-    case "ctrl+a":
-      alert("you pressed ctrl+a!");
-      break;
-    case "ctrl+b":
-      alert("you pressed ctrl+b!");
-      break;
-    case "r":
-      alert("you pressed r!");
-      break;
-    case "f":
-      alert("you pressed f!");
-      break;
+const shortcuts = [
+  {
+    keycodes: [29, 56, 45], // ctrl+alt+x
+    command: "audio_play"
+  },
+  {
+    keycodes: [29, 56, 46], // ctrl+alt+c
+    command: "audio_prev"
+  },
+  {
+    keycodes: [29, 56, 47], // ctrl+alt+v
+    command: "audio_next"
   }
+  // keycodes (via iohook - which are a nightmare):
+  // - issue posted https://github.com/WilixLead/iohook/issues/97
+  // - potential chars https://github.com/WilixLead/iohook/issues/74#issuecomment-387387810
+  //
+  // command (via robotJS):
+  // audio_mute
+  // audio_vol_down
+  // audio_vol_up
+  // audio_play
+  // audio_stop
+  // audio_pause
+  // audio_prev
+  // audio_next
+];
+
+// Iterate through shortcuts, registering the iohook and corresponding command within
+shortcuts.forEach(s => {
+  ioHook.registerShortcut(s.keycodes, keys => {
+    robot.keyTap(s.command);
+  });
 });
-
-// const ioHook = require("iohook");
-// ioHook.on("keypress", event => {
-//   console.log(event);
-//   // {keychar: 'f', keycode: 19, rawcode: 15, type: 'keypress'}
-// });
-// ioHook.start();
-
-// const iaada = ioHook.registerShortcut([29, 56, 65], keys => {
-//   console.log("Shortcut called with f7:", keys);
-// });
-
-// const id = ioHook.registerShortcut([29, 56, 88], keys => {
-//   console.log("Shortcut called with keys:", keys);
-//   úó;
-// });
-
-// const ida = ioHook.registerShortcut([29, 56, 120], keys => {
-//   console.log("Shortcut called with keys:", keys);
-// });
-
-// const idaa = ioHook.registerShortcut([29, 120], keys => {
-//   console.log("Shortcut called with keys:", keys);
-// });
-
-// const idaaa = ioHook.registerShortcut([29, 120], keys => {
-//   console.log("Shortcut called with keys:", keys);
-// });
