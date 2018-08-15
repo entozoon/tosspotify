@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index",
-    "build": "pkg -t node9-win index.js -o node.exe"
+    "build": "pkg -t node10-win index.js -o node.exe"
   },
   "repository": {
     "type": "git",
