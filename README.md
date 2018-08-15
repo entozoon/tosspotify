@@ -6,12 +6,11 @@ Keyboard shortcuts simply trigger media key presses, rather than being wired up 
 
 ## Install
 
-Release is not currently possible, but you can clone and run the project yourself:
+Release is not currently possible without an electron wrapper, so just clone and go:
 
     git clone https://github.com/entozoon/tosspotify.git
     cd tosspotify
-    npm i
-    npm start
+    Tosspotify.bat
 
 ## Shortcuts
 
@@ -21,9 +20,6 @@ Release is not currently possible, but you can clone and run the project yoursel
 | Ctrl-Alt-C | Next song     |
 | Ctrl-Alt-V | Previous song |
 
-## Release (dev notes)
+## Compatibility
 
-Current release built for `node9-win`. It must be named `node.exe` as it uses native modules that rely on that filename [(sigh!)](https://github.com/zeit/pkg/issues/161#issuecomment-394309701).
-
-    npm i -g pkg@4.3.1
-    npm run build
+- Windows

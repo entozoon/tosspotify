@@ -1,10 +1,11 @@
 {
   "name": "tosspotify",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Control Spotify with global hotkeys (a la [Toastify](https://github.com/aleab/toastify) - which is dead at time of writing).",
-  "main": "index.js",
+  "main": "tosspotify.js",
   "scripts": {
-    "start": "nodemon index",
+    "start": "node tosspotify",
+    "dev": "nodemon tosspotify",
     "build": "pkg -t node10-win index.js -o node.exe"
   },
   "repository": {
@@ -18,7 +19,9 @@
   },
   "homepage": "https://github.com/entozoon/tosspotify#readme",
   "dependencies": {
+    "console-title": "^1.1.0",
     "iohook": "^0.2.0",
-    "robotjs": "^0.5.1"
+    "robotjs": "^0.5.1",
+    "tasklist": "^3.1.1"
   }
 }
