@@ -6,7 +6,14 @@ Keyboard shortcuts simply trigger media key presses, rather than being wired up 
 
 ## Install
 
-[Download a release](https://github.com/entozoon/tosspotify/releases)
+**[Download a release here](https://github.com/entozoon/tosspotify/releases).**
+
+If a suitable one is not available, you can clone and run the project yourself (or even PR a release):
+
+    git clone https://github.com/entozoon/tosspotify.git
+    cd tosspotify
+    npm i
+    npm start
 
 ## Shortcuts
 
