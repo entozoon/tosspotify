@@ -13,9 +13,10 @@ Release is not currently possible without an electron wrapper, so just clone and
     npm i
     Tosspotify.bat
     
-You might also want to smash a shortcut file to that .bat into
+You may then want to create a startup shortcut:
     
     shell:startup
+    [then alt-drag the .bat file into here]
 
 ## Shortcuts
 
