@@ -12,9 +12,9 @@ Release is not currently possible without an electron wrapper, so just clone and
     cd tosspotify
     npm i
     Tosspotify.bat
-    
+
 You might also want to smash a shortcut file to that .bat into
-    
+
     shell:startup
 
 ## Shortcuts
@@ -27,4 +27,17 @@ You might also want to smash a shortcut file to that .bat into
 
 ## Compatibility
 
-- Windows
+- Windows 7, 10
+- OSX/Linux in theory, but untested
+
+## Troubleshooting
+
+There are some known npm issues, specifically with Windows 7 x64, so if you get a `node-gyp .. python` error, **in an elevated powershell**, run :
+
+    npm i -g --add-python-to-path='true' --production windows-build-tools
+    setx python "%USERPROFILE%\.windows-build-tools\python27\python.exe"
+    refreshenv
+
+Or, if you don't have chocolatey, logout/restart the computer, then `npm i` again.
+
+This was a hard-won battle for sure.. bloody Windorz!
