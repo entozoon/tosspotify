@@ -10,7 +10,12 @@ Release is not currently possible without an electron wrapper, so just clone and
 
     git clone https://github.com/entozoon/tosspotify.git
     cd tosspotify
+    npm i
     Tosspotify.bat
+    
+You might also want to smash a shortcut file to that .bat into
+    
+    shell:startup
 
 ## Shortcuts
 
