@@ -35,7 +35,7 @@ You may then want to create a startup shortcut in:
 
 ## Troubleshooting
 
-There are some known npm issues, specifically with Windows x64, so if you get a `node-gyp .. python` error, **in an elevated powershell**, run :
+There are some known npm issues, specifically with Windows x64, so if you get a `node-gyp .. python` error, update node to LTS and **in an elevated powershell**, run :
 
     npm i -g --add-python-to-path='true' --production windows-build-tools
     setx python "%USERPROFILE%\.windows-build-tools\python27\python.exe"
