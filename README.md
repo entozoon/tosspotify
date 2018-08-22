@@ -41,6 +41,7 @@ There are some known npm issues, specifically with Windows x64, so if you get a 
 - Update NPM
 ```
 npm -g install npm@next
+npm cache clean --force
 ```
 - **In an elevated powershell**, run :
 ```
