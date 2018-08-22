@@ -1,6 +1,9 @@
+const {getAppDataPath} = require("appdata-path");
 const tasklist = require("tasklist"),
   setTitle = require("console-title"),
   exec = require("child_process").execFile;
+
+  return;
 
 const shortcuts = [
   {
@@ -55,7 +58,7 @@ tasklist({
 
     // Open Spotify, if passed --open-spotify parameter
     if (process.argv[2] && process.argv[2] === "--open-spotify") {
-      exec("%APPDATA%/Spotify/Spotify.exe", function(err, data) {
+      exec(getAppDataPath().replace('Roaming','')+"Spotify/Spotify.exe", function(err, data) {
         console.log(err);
         console.log(data.toString());
       });

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/entozoon/tosspotify#readme",
   "dependencies": {
+    "appdata-path": "^0.1.2",
     "console-title": "^1.1.0",
     "iohook": "^0.2.0",
     "robotjs": "^0.5.1",
