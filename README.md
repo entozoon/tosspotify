@@ -28,10 +28,13 @@ You may then want to create a startup shortcut in:
 | Ctrl-Alt-C | Next song     |
 | Ctrl-Alt-V | Previous song |
 
+## Options
+
+`Tosspotify-and-open-spotify.bat` will, surprisingly, open Spotify too. Currently hard-coded to `%APPDATA%/Spotify/Spotify.exe` but will abstract to a parameter at request.
+
 ## Compatibility
 
-- Windows 7, 10
-- OSX/Linux in theory, but untested
+- Windows 7-10
 
 ## Troubleshooting
 
