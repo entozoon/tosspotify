@@ -41,5 +41,11 @@ There are some known npm issues, specifically with Windows x64, so if you get a 
     setx python "%USERPROFILE%\.windows-build-tools\python27\python.exe"
     [logout/restart the computer]
     npm i
-
-This was a hard-won battle for sure.. bloody Windorz!
+    
+Still getting errors, perhaps mentioning `c:\Microsoft.Cpp.Default.props`?
+    
+Set an environment variable called `VCTargetsPath` to the directory containing your `Microsoft.Cpp.Defaults.Props` file, so for me it was 
+    
+    VCTargetsPath  :  C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140
+    
+This was a hard-won battle for sure.. bloody Windorz! Can't be helped though, as robotjs is simulating systemic stuff (keypresses)
