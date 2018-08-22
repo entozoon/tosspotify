@@ -1,6 +1,6 @@
 {
   "name": "tosspotify",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Control Spotify with global hotkeys (a la [Toastify](https://github.com/aleab/toastify) - which is dead at time of writing).",
   "main": "tosspotify.js",
   "scripts": {
