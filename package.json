@@ -5,6 +5,7 @@
   "main": "tosspotify.js",
   "scripts": {
     "start": "node tosspotify",
+    "start-and-open-spotify": "node tosspotify --open-spotify",
     "dev": "nodemon tosspotify",
     "build": "pkg -t node10-win index.js -o node.exe"
   },

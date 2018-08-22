@@ -52,6 +52,10 @@ tasklist({
       });
     });
 
+    // Open Spotify, if passed --open-spotify parameter
+    if (process.argv[2] && process.argv[2] === "--open-spotify") {
+    }
+
     console.log(
       "\033c",
       `_____                         _   _  __
