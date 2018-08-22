@@ -37,18 +37,18 @@ You may then want to create a startup shortcut in:
 
 There are some known npm issues, specifically with Windows x64, so if you get a `node-gyp .. python` error..
 
-* Update Node to LTS
-* Update NPM
-
+- Update Node to LTS
+- Update NPM
+```
 npm -g install npm@next
-
-* and **in an elevated powershell**, run :
-
-    npm i -g --add-python-to-path='true' --production windows-build-tools
-    setx python "%USERPROFILE%\.windows-build-tools\python27\python.exe"
-    [logout/restart the computer]
-    npm i
-    
+```
+- **In an elevated powershell**, run :
+```
+npm i -g --add-python-to-path='true' --production windows-build-tools
+setx python "%USERPROFILE%\.windows-build-tools\python27\python.exe"
+[logout/restart the computer]
+npm i
+```
 Still getting errors, perhaps mentioning `c:\Microsoft.Cpp.Default.props`?
     
 Set an environment variable called `VCTargetsPath` to the directory containing your `Microsoft.Cpp.Defaults.Props` file, so for me it was 
