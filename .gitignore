@@ -1,2 +1,4 @@
 node_modules
-*.exe
+**/*.DS_Store
+**/*.log
+.sass-cache
