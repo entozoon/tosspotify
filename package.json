@@ -4,12 +4,13 @@
   "description": "Control Spotify with global hotkeys (a la [Toastify](https://github.com/aleab/toastify) - which is dead at time of writing).",
   "main": "./app/js/main.js",
   "scripts": {
-    "start": "npm-watch | npm run sass",
+    "start": "npm-run-all -p watch sass",
+    "watch": "npm-watch",
     "refresh": "electron .",
     "sass": "node-sass app/scss/app.scss --output app/css/ --watch --recursive --output-style compressed --include-path ./node_modules",
     "register": "electron -r babel-register .",
     "dist": "electron-packager . --out=dist --overwrite --version-string.FileDescription=electron-app-template",
-    "something": "npm rebuild --runtime=electron --target=1.1.3 --disturl=https://atom.io/download/atom-shell --abi=48"
+    "rebuild": "electron-rebuild -f -w yourmodule"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
   "homepage": "https://github.com/entozoon/tosspotify#readme",
   "devDependencies": {
     "electron": "^1.4.1",
-    "electron-packager": "^8.6.0"
+    "electron-packager": "^8.6.0",
+    "electron-rebuild": "^1.8.3",
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "appdata-path": "^0.1.2",

@@ -1,14 +1,7 @@
-# Electron React Boilerplate
+# Tosspotify
 
-A cross-platform app starting point with React JS.
+## Dev
 
-## Installation (dev)
-	npm i
+Robotjs native packages need to be rebuilt for electron for reasons
 
-## Compile and Run (dev)
-
-	npm run dev
-
-## Compile for Distribution (production)
-
-	npm run dist
+    npm run rebuild
