@@ -1,4 +1,4 @@
-const { BrowserWindow, app, globalShortcut } = require("electron"),
+const { BrowserWindow, app, globalShortcut, ipcMain } = require("electron"),
   path = require("path"),
   url = require("url"),
   tasklist = require("tasklist"),
@@ -17,6 +17,10 @@ const { BrowserWindow, app, globalShortcut } = require("electron"),
       command: "audio_next"
     }
   ];
+
+ipcMain.on("escape", () => {
+  app.quit();
+});
 
 let mainWindow; // must be global
 
@@ -75,7 +79,10 @@ const createWindow = () => {
         });
       });
 
-      // Exit
+      // Exit(s)
+      // globalShortcut.register("Escape", () => {
+      // app.quit();
+      // });
       mainWindow.on("closed", function() {
         mainWindow = null;
       });

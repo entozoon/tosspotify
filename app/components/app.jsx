@@ -1,6 +1,20 @@
 import React from "react";
+const { ipcRenderer } = require("electron");
 
 class AppComponent extends React.Component {
+  constructor(props) {
+    super(props);
+
+    window.addEventListener(
+      "keyup",
+      event => {
+        if (event.key === "Escape") {
+          ipcRenderer.send("escape");
+        }
+      },
+      true
+    );
+  }
   render() {
     //   const logo = `
     //   _____                         _   _  __

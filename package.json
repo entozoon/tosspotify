@@ -9,8 +9,8 @@
     "refresh": "electron .",
     "sass": "node-sass app/scss/app.scss --output app/css/ --watch --recursive --output-style compressed --include-path ./node_modules",
     "register": "electron -r babel-register .",
-    "dist": "electron-packager . --out=dist --overwrite --version-string.FileDescription=electron-app-template",
-    "rebuild": "electron-rebuild -f -w yourmodule"
+    "rebuild-modules": "electron-rebuild -f -w Tosspotify",
+    "build": "electron-packager . --out=dist --overwrite --version-string.FileDescription=electron-app-template"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.24.1",
-    "electron-packager": "^8.6.0",
+    "electron-packager": "13.0.1",
     "eslint": "^3.0.0",
     "eslint-loader": "^1.0.0",
     "eslint-plugin-react": "^6.0.0",
