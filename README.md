@@ -6,6 +6,10 @@ Control Spotify with global hotkeys (a la Toastify - which is dead at time of wr
 
 Keyboard shortcuts simply trigger media key presses.
 
+## Install
+Head over to [Rel
+eases](https://github.com/entozoon/tosspotify/releases)
+
 ## Shortcuts
 
 | Keys       | Command       |
