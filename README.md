@@ -1,24 +1,14 @@
 # Tosspotify
 
-![Screenshot](/posterity/screenshot-1.png "Screenshot")
+![Screenshot](/posterity/screenshot-2.png "Screenshot")
 
-Control Spotify with global hotkeys (a la [Toastify](https://github.com/aleab/toastify) - which is dead at time of writing).
+Control Spotify with global hotkeys (a la Toastify - which is dead at time of writing).
 
-Keyboard shortcuts simply trigger media key presses, rather than being wired up to [Spotify Web API](https://github.com/thelinmichael/spotify-web-api-node), although that could be a fun way to expand in future (song name popups and whatnot).
+Keyboard shortcuts simply trigger media key presses.
 
 ## Install
 
-Release is not currently possible without an electron wrapper, so just clone and go:
-
-    git clone https://github.com/entozoon/tosspotify.git
-    cd tosspotify
-    npm i
-    Tosspotify.bat
-
-You may then want to create a startup shortcut in:
-
-    shell:startup
-    [then alt-drag the .bat file into here]
+Head over to [Releases](https://github.com/entozoon/tosspotify/releases).
 
 ## Shortcuts
 
@@ -28,35 +18,11 @@ You may then want to create a startup shortcut in:
 | Ctrl-Alt-C | Next song     |
 | Ctrl-Alt-V | Previous song |
 
-## Options
+## Dev
 
-`Tosspotify-and-open-spotify.bat` will, surprisingly, open Spotify too. Currently hard-coded to `%APPDATA%/Spotify/Spotify.exe` but will abstract to a parameter at request.
+Robotjs native packages need to be rebuilt for electron for .. reasons
 
-## Compatibility
-
-- Windows 7-10
-
-## Troubleshooting
-
-There are some known npm issues, specifically with Windows x64, so if you get a `node-gyp .. python` error..
-
-- Update Node to LTS
-- Update NPM
-```
-npm -g install npm@next
-npm cache clean --force
-```
-- **In an elevated powershell**, run :
-```
-npm i -g --add-python-to-path='true' --production windows-build-tools
-setx python "%USERPROFILE%\.windows-build-tools\python27\python.exe"
-[logout/restart the computer]
-npm i
-```
-Still getting errors, perhaps mentioning `c:\Microsoft.Cpp.Default.props`?
-    
-Set an environment variable called `VCTargetsPath` to the directory containing your `Microsoft.Cpp.Defaults.Props` file, so for me it was 
-    
-    VCTargetsPath  :  C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140
-    
-This was a hard-won battle for sure.. bloody Windorz! Can't be helped though, as robotjs is simulating systemic stuff (keypresses)
+    npm i
+    npm start
+    npm run rebuild-mobuldes
+    npm run build
