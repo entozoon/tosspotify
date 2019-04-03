@@ -24,5 +24,5 @@ Robotjs native packages need to be rebuilt for electron for .. reasons
 
     npm i
     npm start
-    npm run rebuild-mobuldes
+    npm run rebuild-modules
     npm run build
