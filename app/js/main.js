@@ -1,4 +1,11 @@
-const { BrowserWindow, app, globalShortcut, ipcMain } = require("electron"),
+const {
+    BrowserWindow,
+    app,
+    globalShortcut,
+    ipcMain,
+    Menu,
+    Tray
+  } = require("electron"),
   path = require("path"),
   url = require("url"),
   tasklist = require("tasklist"),
@@ -25,20 +32,7 @@ ipcMain.on("escape", () => {
 let mainWindow; // must be global
 
 const createWindow = () => {
-  console.log(
-    "\033c",
-    `
-   _____                         _   _  __
-  |_   _|                       | | (_)/ _|
-    | | ___  ___ ___ _ __   ___ | |_ _| |_ _   _
-    | |/ _ \\/ __/ __| '_ \\ / _ \\| __| |  _| | | |
-    | | (_) \\__ \\__ \\ |_) | (_) | |_| | | | |_| |
-    \\_/\\___/|___/___/ .__/ \\___/ \\__|_|_|  \\__, |
-                    | |                     __/ |
-                    |_|                    |___/`
-  );
-
-  // // Require IO libraries only.. ONLY.. if not already running, or the memory leeks more than a welshman.
+  // Require IO libraries only.. ONLY.. if not already running, or the memory leeks more than a welshman
   tasklist({
     filter: ["windowtitle eq Tosspotify"]
   }).then(processes => {
@@ -52,7 +46,8 @@ const createWindow = () => {
         title: "Tosspotify",
         frame: false,
         resizable: true,
-        transparent: true
+        transparent: true,
+        icon: path.join(__dirname, "../icon.png")
       });
 
       // Load index.html
@@ -77,6 +72,30 @@ const createWindow = () => {
           robot.keyTap(s.command);
           // Display a human readable visual..
         });
+      });
+
+      // Systray icon
+      var appIcon = new Tray(path.join(__dirname, "../icon.png"));
+      var contextMenu = Menu.buildFromTemplate([
+        {
+          label: "Open",
+          click: () => {
+            mainWindow.show();
+          }
+        },
+        {
+          label: "Quit",
+          click: () => {
+            app.quit();
+          }
+        }
+      ]);
+      appIcon.setContextMenu(contextMenu);
+
+      // Minimise to systray
+      mainWindow.on("minimize", e => {
+        e.preventDefault();
+        mainWindow.hide();
       });
 
       // Exit(s)

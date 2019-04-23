@@ -7,6 +7,7 @@ Control Spotify with global hotkeys (a la Toastify - which is dead at time of wr
 Keyboard shortcuts simply trigger media key presses.
 
 ## Install
+
 Head over to [Releases](https://github.com/entozoon/tosspotify/releases)
 
 ## Shortcuts
@@ -23,5 +24,5 @@ Robotjs native packages need to be rebuilt for electron for reasons
 
     npm i
     npm start
-    npm run rebuild-mobuldes
+    npm run rebuild-modules
     npm run build

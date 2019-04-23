@@ -1,6 +1,6 @@
 {
   "name": "tosspotify",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Control Spotify with global hotkeys (a la [Toastify](https://github.com/aleab/toastify) - which is dead at time of writing).",
   "main": "./app/js/main.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "sass": "node-sass app/scss/app.scss --output app/css/ --watch --recursive --output-style compressed --include-path ./node_modules",
     "register": "electron -r babel-register .",
     "rebuild-modules": "electron-rebuild -f -w Tosspotify",
-    "build": "electron-packager . --out=dist --overwrite --version-string.FileDescription=electron-app-template"
+    "build": "electron-packager . Tosspotify --out=dist --overwrite --appname=\"Tosspotify\" --version-string.FileDescription=Tosspotify"
   },
   "repository": {
     "type": "git",
