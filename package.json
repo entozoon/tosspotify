@@ -1,6 +1,6 @@
 {
   "name": "tosspotify",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Control Spotify with global hotkeys (a la [Toastify](https://github.com/aleab/toastify) - which is dead at time of writing).",
   "main": "./app/js/main.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/entozoon/tosspotify.git"
   },
-  "author": "",
+  "author": "michaelcook.tech",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/entozoon/tosspotify/issues"
