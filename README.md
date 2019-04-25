@@ -10,6 +10,8 @@ Keyboard shortcuts simply trigger media key presses.
 
 Head over to [Releases](https://github.com/entozoon/tosspotify/releases)
 
+Head over to [Releases](https://github.com/entozoon/tosspotify/releases).
+
 ## Shortcuts
 
 | Keys       | Command       |
@@ -20,7 +22,7 @@ Head over to [Releases](https://github.com/entozoon/tosspotify/releases)
 
 ## Dev
 
-Robotjs native packages need to be rebuilt for electron for reasons
+Robotjs native packages need to be rebuilt for electron for .. reasons
 
     npm i
     npm start
